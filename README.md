@@ -16,6 +16,7 @@ Difficult early detection before escalation to large-scale wildfires
 This work proposes a UAV-based solution using thermal infrared imaging with lightweight deep learning.
 The framework is improved based on yolov10, which can be downloaded and reproduced by yourself. The core modules are located in custom_modules_ds.py, which can be further improved.
 Architecture
+The GitHub of Yolo ontology is: https://github.com/ultralytics/ultralytics
 Core Components
 Wavelet-based Feature Enhancement Module (C2f_WT)
 
