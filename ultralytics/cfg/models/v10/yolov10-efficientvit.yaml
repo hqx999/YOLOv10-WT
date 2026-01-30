@@ -1,0 +1,18 @@
+# 继承官方yolov10n配置
+backbone:
+  name: EfficientViTBackbone
+  model_name: m0
+  channels: [128, 256, 512]  # 必须与neck输入匹配
+
+  # yolov10-repgfpn.yaml
+neck:
+  type: RepGFPN
+  in_channels: [128, 256, 512]  # 需与Backbone输出一致
+  out_channels: 256             # 输出通道数
+
+head:
+  type: ASSFHead
+  nc: 1  # 林火检测单类别
+  channels: [256, 512, 1024]  # 需与Neck输出通道一致
+  reg_max: 16
+
